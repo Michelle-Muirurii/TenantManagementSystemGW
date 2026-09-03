@@ -64,7 +64,7 @@ fun string() {
     val name = "Jane Wanjiku"
     val houseNumber = "A-204"
     val monthlyRent = 25000
-    val amountPaid: 20000
+    val amountPaid = 20000
 
     // Task 3.1 - String Concatenation using (+) operator only
     println{name + " lives in house " + houseNumber}
