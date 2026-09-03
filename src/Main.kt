@@ -15,7 +15,7 @@ fun welcome() {
 fun variables(){
     println("\n=== Variables ===")
     val tenantId = 1001
-    val name = "Jane wanjiku"
+    val name = "Jane Wanjiku"
     val phone = "0712345678"
     val houseNumber = "A-204"
     val monthlyRent = 25000
@@ -60,34 +60,34 @@ fun datatypes() {
 }
 // Strings [Fareed]
 fun string() {
-    // Task 3.1 - String Concatenation using (+) operator only
+    println("\n=== Strings ===")
     val name = "Jane Wanjiku"
-    val house = "A-204"
+    val houseNumber = "A-204"
+    val monthlyRent = 25000
+    val amountPaid: 20000
 
-    println{name + " lives in house " + house}
+    // Task 3.1 - String Concatenation using (+) operator only
+    println{name + " lives in house " + houseNumber}
 
     // Task 3.2 - String Template
-    println("$name lives in house $house")
+    println("$name lives in house $houseNumber")
 
     // Task 3.3 - the Template Expression
-    val monthlyRent = 25000
-
     println("Total Rent for 6 months: KES ${monthlyRent * 6}")
 
     // Task 3.4 - Triple-Quoted String
     val receipt = """
         ===== RENT RECEIPT =====
-        
-        Tenant: Jane Wanjiku
-        House: A-204
-        Paid: KES 20000
+        Tenant: $name
+        House: $houseNumber
+        Paid: $amountPaid
     """.trimIndent()
     println(receipt)
 
     // Task 3.5 - Predict First
     val greeting = "Dear Tenant"
-
     greeting.uppercase()
     println(greeting)
+    println(greeting.uppercase())
 
 }
