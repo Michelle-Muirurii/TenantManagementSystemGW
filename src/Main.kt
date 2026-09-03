@@ -4,6 +4,7 @@ fun main() {
     welcome()
     variables()
     datatypes()
+    string()
 }
 
 fun welcome() {
@@ -67,7 +68,7 @@ fun string() {
     val amountPaid = 20000
 
     // Task 3.1 - String Concatenation using (+) operator only
-    println{name + " lives in house " + houseNumber}
+    // println(name + " lives in house " + houseNumber)
 
     // Task 3.2 - String Template
     println("$name lives in house $houseNumber")
@@ -87,7 +88,7 @@ fun string() {
     // Task 3.5 - Predict First
     val greeting = "Dear Tenant"
     greeting.uppercase()
-    println(greeting)
+    // println(greeting)
     println(greeting.uppercase())
 
 }
