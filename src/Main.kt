@@ -202,3 +202,63 @@ fun rangesAndLoops() {
     // Task 6.6
     repeat(3) { println("Please pay your rent.") }
 }
+//List and arrays
+fun listsAndArrays() {
+    println("\n=== Lists and Arrays ===")
+
+
+    val tenants = listOf("Jane Wanjiku", "Brian Otieno", "Mary Achieng", "John Kamau")
+    println(tenants.first())
+    println(tenants[tenants.size - 1])
+
+
+    val mutableTenants = tenants.toMutableList()
+    mutableTenants.add("David Mwangi")
+    mutableTenants.remove("Brian Otieno")
+    println(mutableTenants)
+    println(mutableTenants.size)
+
+
+    val houseNumbers = arrayOf("A-101", "A-102", "A-103", "A-104")
+    println(houseNumbers[1])
+    houseNumbers[0] = "A-201"
+    println(houseNumbers.joinToString())
+
+
+    val demoNumbers = arrayOf("A-101", "A-102")
+    println(demoNumbers)
+    println(demoNumbers.joinToString())
+    println(demoNumbers.contentToString())
+
+    // Task 7.5
+    val blockA = intArrayOf(1, 2, 3)
+    val blockB = intArrayOf(4, 5, 6)
+    println((blockA + blockB).joinToString())
+    println((blockB + blockA).joinToString())
+}
+//Null safety
+fun nullSafety() {
+    println("\n=== Null Safety ===")
+
+
+    var tenantEmail: String? = null
+    println(tenantEmail)
+
+
+    println("Email: ${tenantEmail ?: "Not provided"}")
+    tenantEmail = "jane@example.com"
+    println("Email: ${tenantEmail ?: "Not provided"}")
+
+
+    tenantEmail = null
+    println(tenantEmail?.length)
+    println(tenantEmail?.length ?: 0)
+
+
+
+    val nextOfKin: String? = null
+    println(nextOfKin?.uppercase() ?: "No next of kin on record")
+
+    val nextOfKinPresent: String? = "Peter Wanjiku"
+    println(nextOfKinPresent?.uppercase() ?: "No next of kin on record")
+}
