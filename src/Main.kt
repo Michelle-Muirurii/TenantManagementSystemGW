@@ -92,3 +92,84 @@ fun string() {
     println(greeting.uppercase())
 
 }
+//Part 4: Operators [Angel]
+fun Operators() {
+    println("\n=== Part 4: Operators ===")
+    val monthlyRent = 25000
+    val amountPaid = 20000
+
+    // Task 4.1
+    println("Balance: KES ${monthlyRent - amountPaid}")
+
+    // Task 4.2
+    val percentPaidWrong = (amountPaid / monthlyRent) * 100
+    println("Paid: $percentPaidWrong%")
+    val percentPaidFixA = (amountPaid.toDouble() / monthlyRent) * 100
+    val percentPaidFixB = (amountPaid * 100) / monthlyRent
+    println("Paid (fix A): $percentPaidFixA%")
+    println("Paid (fix B): $percentPaidFixB%")
+
+    // Task 4.3
+    val instalment = 6000
+    println("Full instalments: ${monthlyRent / instalment}")
+    println("Remaining amount: KES ${monthlyRent % instalment}")
+
+    // Task 4.4
+    val totalRent = monthlyRent.times(6)
+    println("Total rent: $totalRent")
+
+    // Task 4.5
+    val isRentPaid = amountPaid >= monthlyRent
+    println("Is rent paid: $isRentPaid")
+
+    // Task 4.6
+    var monthsInArrears = 2
+    val needsReminder = (amountPaid < monthlyRent) && (monthsInArrears > 1)
+    println("Needs reminder: $needsReminder")
+}
+// Part 5: Decisions
+fun Decisions() {
+    println("\n=== Part 5: Decisions ===")
+    val monthlyRent = 25000
+    val amountPaid = 20000
+    val balance = monthlyRent - amountPaid
+
+    // Task 5.1
+    if (balance <= 0) println("Rent is fully paid") else println("Rent is outstanding")
+
+    // Task 5.2
+    if (balance <= 0) {
+        println("Rent is fully paid")
+    } else if (balance < 10000) {
+        println("Small outstanding balance")
+    } else {
+        println("Large outstanding balance")
+    }
+
+    // Task 5.3
+    when {
+        balance <= 0 -> println("Rent is fully paid")
+        balance < 10000 -> println("Small outstanding balance")
+        else -> println("Large outstanding balance")
+    }
+
+    // Task 5.4
+    val monthsInArrears = 4
+    val classification = when (monthsInArrears) {
+        0 -> "Rent is up to date"
+        in 1..2 -> "Early arrears"
+        in 3..5 -> "Serious arrears"
+        in 6..12 -> "Critical arrears"
+        else -> "Review tenant account"
+    }
+    println(classification)
+
+    // Task 5.5
+    val status = "ACTIVE"
+    when (status) {
+        "ACTIVE" -> println("Tenant is currently occupying the house")
+        "VACATED" -> println("Tenant has vacated the house")
+        "PENDING" -> println("Tenant status is pending")
+        else -> println("Unknown status")
+    }
+}
