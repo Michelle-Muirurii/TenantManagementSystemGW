@@ -173,3 +173,32 @@ fun Decisions() {
         else -> println("Unknown status")
     }
 }
+// Ranges and Loops [Nicole]
+fun rangesAndLoops() {
+    println("\n=== Ranges and Loops ===")
+
+    // Task 6.1
+    for (month in 1..12) println(month)
+
+    // Task 6.2
+    for (month in 1..11 step 2) println("Checking payment history for month $month")
+
+    // Task 6.3
+    for (month in 5 downTo 1) println(month)
+
+    // Task 6.4
+    val tenants = listOf("Jane", "Brian", "Mary", "David")
+    for ((index, tenant) in tenants.withIndex()) println("${index + 1}. $tenant")
+
+    // Task 6.5
+    val vacantHouses = 0
+    while (vacantHouses > 0) {           // checks condition first -> never runs, 0 lines
+        println("Checking vacant houses...")
+    }
+    do {                                   // runs the body once before checking -> 1 line
+        println("Checking vacant houses...")
+    } while (vacantHouses > 0)
+
+    // Task 6.6
+    repeat(3) { println("Please pay your rent.") }
+}
