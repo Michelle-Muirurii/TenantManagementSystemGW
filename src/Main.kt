@@ -1,10 +1,23 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// Group 3-[Michelle Muiruri-174904,
+//          Angel Muthoni-189733,
+//          Fareed Kamau-193339,
+//          Nicole Indimuli-191322,
+//          Muli Junior-184070,
+//          Tichina Naitore-188142]
+//Github: https://github.com/Michelle-Muirurii/TenantManagementSystemGW.git
+
 fun main() {
     welcome()
     variables()
     datatypes()
-    string()
+    strings()
+    Operators()
+    decisions()
+    rangesAndLoops()
+    listsAndArrays()
+    nullSafety()
 }
 
 fun welcome() {
@@ -13,6 +26,7 @@ fun welcome() {
 
 
 // Variables[Michelle]
+// Task 1.1
 fun variables(){
     println("\n=== Variables ===")
     val tenantId = 1001
@@ -22,11 +36,14 @@ fun variables(){
     val monthlyRent = 25000
     var amountPaid = 15000
 
+    //Task 1.2
     println("Amount paid before: $amountPaid")
     amountPaid = 5000
     println("Amount paid after: $amountPaid")
+
+    //Task 1.3
 }
-//Datatypes
+//Datatypes[Muli]
 fun datatypes() {
     println("\n=== Data Types and Casting ===")
 
@@ -44,9 +61,11 @@ fun datatypes() {
 
     // Task 2.3 - Int to Double conversion
     val rentAsDouble: Double = monthlyRent.toDouble()
+    println("Rent as double: $rentAsDouble")
 
     // Task 2.4 - Long with underscores
     val registrationNumber: Long = 999_999_999L
+    println("Registration number: $registrationNumber")
 
     println("Tenant ID: $tenantId")
     println("Name: $name")
@@ -60,7 +79,7 @@ fun datatypes() {
     println("Registration Number: $registrationNumber")
 }
 // Strings [Fareed]
-fun string() {
+fun strings() {
     println("\n=== Strings ===")
     val name = "Jane Wanjiku"
     val houseNumber = "A-204"
@@ -68,7 +87,7 @@ fun string() {
     val amountPaid = 20000
 
     // Task 3.1 - String Concatenation using (+) operator only
-    // println(name + " lives in house " + houseNumber)
+     println(name + " lives in house " + houseNumber)
 
     // Task 3.2 - String Template
     println("$name lives in house $houseNumber")
@@ -88,7 +107,7 @@ fun string() {
     // Task 3.5 - Predict First
     val greeting = "Dear Tenant"
     greeting.uppercase()
-    // println(greeting)
+    println(greeting)
     println(greeting.uppercase())
 
 }
@@ -127,9 +146,9 @@ fun Operators() {
     val needsReminder = (amountPaid < monthlyRent) && (monthsInArrears > 1)
     println("Needs reminder: $needsReminder")
 }
-// Part 5: Decisions
-fun Decisions() {
-    println("\n=== Part 5: Decisions ===")
+// Part 5: Decisions [Angel]
+fun decisions() {
+    println("\n=== Decisions ===")
     val monthlyRent = 25000
     val amountPaid = 20000
     val balance = monthlyRent - amountPaid
@@ -202,7 +221,7 @@ fun rangesAndLoops() {
     // Task 6.6
     repeat(3) { println("Please pay your rent.") }
 }
-//List and arrays
+//List and arrays[Tichina]
 fun listsAndArrays() {
     println("\n=== Lists and Arrays ===")
 
