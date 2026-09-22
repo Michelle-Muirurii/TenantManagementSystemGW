@@ -8,6 +8,21 @@
 //          Tichina Naitore-188142]
 //Github: https://github.com/Michelle-Muirurii/TenantManagementSystemGW.git
 
+// Tenant class
+// Task 1 and Task 2
+class Tenant(
+    val name: String,
+    val apartmentNumber: Int,
+    val rentAmount: Double
+) {
+    var isPaid: Boolean = false
+
+    // Marks the tenant's rent as paid
+    fun payRent() {
+        isPaid = true
+        println("Rent paid successfully by $name")
+    }
+}
 fun main() {
     welcome()
     variables()
@@ -18,6 +33,16 @@ fun main() {
     rangesAndLoops()
     listsAndArrays()
     nullSafety()
+    // OOP Lab - Part 1 and Part 2 [Muli]
+    // The primary constructor allows us to provide tenant information when creating the object.
+    val tenant1 = Tenant("Jane Wanjiku", 101, 15000.0)
+    val tenant2 = Tenant("Brian Otieno", 102, 18000.0)
+
+    // Pay rent for only the first tenant
+    tenant1.payRent()
+
+    println("Tenant 1 rent paid: ${tenant1.isPaid}")
+    println("Tenant 2 rent paid: ${tenant2.isPaid}")  // Each Tenant object has its own properties, so different objects can have different information and payment statuses.
 }
 
 fun welcome() {
