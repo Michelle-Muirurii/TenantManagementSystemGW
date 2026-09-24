@@ -20,7 +20,11 @@ class Tenant(
     private var _rentAmount: Double = rentAmount
 
     var rentAmount: Double
-    get() = _rentAmount
+        // Task 4: Custom Getter
+        get() {
+            println("Rent Amount Accessed.")
+            return _rentAmount
+        }
     set(value) {
         if (value >=0){
             _rentAmount = value
@@ -55,6 +59,7 @@ fun main() {
 
     println("Tenant 1 rent paid: ${tenant1.isPaid}")
     println("Tenant 2 rent paid: ${tenant2.isPaid}")  // Each Tenant object has its own properties, so different objects can have different information and payment statuses.
+    println(tenant1.rentAmount)
 }
 
 fun welcome() {
