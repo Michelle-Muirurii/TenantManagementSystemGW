@@ -13,9 +13,21 @@
 class Tenant(
     val name: String,
     val apartmentNumber: Int,
-    val rentAmount: Double
+    rentAmount: Double
 ) {
     var isPaid: Boolean = false
+
+    private var _rentAmount: Double = rentAmount
+
+    var rentAmount: Double
+    get() = _rentAmount
+    set(value) {
+        if (value >=0){
+            _rentAmount = value
+        } else {
+            println("Rent amount cannot be negative")
+        }
+    }
 
     // Marks the tenant's rent as paid
     fun payRent() {
