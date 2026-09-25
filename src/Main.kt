@@ -39,6 +39,24 @@ class Tenant(
         println("Rent paid successfully by $name")
     }
 }
+// Apartment Class
+//Task 5: Composition - Apartment has tenant objects
+//Task 6: addTenant() Lets us add tenants to this apartment's list
+class Apartment(
+    val apartmentNumber: Int
+) {
+    val tenants: MutableList<Tenant> = mutableListOf()
+
+    fun addTenant(tenant: Tenant) {
+        tenants.add(tenant)
+    }
+    //Task 6 - Think About it:
+    //An Apartment "has" Tenant objects because it stores them inside itself
+    // as a property (the tenants list) rather than being a type of tenant.
+    //This is composition - a "has-a" relationship
+    //as opposed to inheritance which is an "is-a" relationship.
+
+}
 fun main() {
     welcome()
     variables()
@@ -60,7 +78,19 @@ fun main() {
     println("Tenant 1 rent paid: ${tenant1.isPaid}")
     println("Tenant 2 rent paid: ${tenant2.isPaid}")  // Each Tenant object has its own properties, so different objects can have different information and payment statuses.
     println(tenant1.rentAmount)
+    //OOP Lab - Task 5 and Task 6 [Nicole]
+    //Create an Apartemnt object
+    val apartment = Apartment(101)
+
+    apartment.addTenant(tenant1)
+    apartment.addTenant(tenant2)
+
+    println("Apartment ${apartment.apartmentNumber} has ${apartment.tenants.size} tenants")
+    for (t in apartment.tenants) {
+        println("Stored tenant: ${t.name}")
+    }
 }
+
 
 fun welcome() {
     println("Welcome to Tenant Management System")
