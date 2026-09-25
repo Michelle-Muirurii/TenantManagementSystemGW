@@ -56,6 +56,19 @@ class Apartment(
     //This is composition - a "has-a" relationship
     //as opposed to inheritance which is an "is-a" relationship.
 
+    // Task 7 display every tenant's name, rents amount and payment status
+
+    fun showTenants(){
+        println("Apartment: $apartmentNumber")
+        for (tenant in tenants){
+            println("Tenant: ${tenant.name}")
+            println("Rent: $
+            {tenant.rentAmount}")
+                    println("Rent paid : $" +
+                    "${tenant.isPaid}")
+        }
+    }
+
 }
 fun main() {
     welcome()
