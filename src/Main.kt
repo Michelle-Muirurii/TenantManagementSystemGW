@@ -62,10 +62,8 @@ class Apartment(
         println("Apartment: $apartmentNumber")
         for (tenant in tenants){
             println("Tenant: ${tenant.name}")
-            println("Rent: $
-            {tenant.rentAmount}")
-                    println("Rent paid : $" +
-                    "${tenant.isPaid}")
+            println("Rent: ${tenant.rentAmount}")
+            println("Rent paid : ${tenant.isPaid}")
         }
     }
 
@@ -91,18 +89,22 @@ fun main() {
     println("Tenant 1 rent paid: ${tenant1.isPaid}")
     println("Tenant 2 rent paid: ${tenant2.isPaid}")  // Each Tenant object has its own properties, so different objects can have different information and payment statuses.
     println(tenant1.rentAmount)
+
+    println("Rent before: ${tenant1.rentAmount}")
+    tenant1.rentAmount = -5000.0
+    println("Rent after: ${tenant1.rentAmount}")
     //OOP Lab - Task 5 and Task 6 [Nicole]
-    //Create an Apartemnt object
+    //Create an Apartment object
     val apartment = Apartment(101)
 
     apartment.addTenant(tenant1)
     apartment.addTenant(tenant2)
 
-    println("Apartment ${apartment.apartmentNumber} has ${apartment.tenants.size} tenants")
-    for (t in apartment.tenants) {
-        println("Stored tenant: ${t.name}")
-    }
+    apartment.showTenants()
+
+
 }
+
 
 
 fun welcome() {
